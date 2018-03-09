@@ -33,6 +33,12 @@ public:
             if(beta > 60) focus = true;
             else focus = false;
         }
+    
+    
+        if(focus) r.setFocusWaiting();
+    
+        r.send();
+    
     };
     
     void draw(){
@@ -40,10 +46,8 @@ public:
     
         data_controller.drawData();
     
-        if(focus) r.setFocusWaiting();
-    
-        r.send();
-    
+        
+        
         ////////////////////
         // 情報表示/////////
         ////////////////////
